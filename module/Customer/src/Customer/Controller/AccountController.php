@@ -5,6 +5,7 @@ namespace Customer\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Customer\Form\Customer as CustomerForm;
+use Zend\EventManager\EventManager;
 
 class AccountController extends AbstractActionController
 {
