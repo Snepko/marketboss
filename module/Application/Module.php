@@ -19,7 +19,21 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+<<<<<<< HEAD
        
+=======
+        $eventManager->attach(MvcEvent::EVENT_DISPATCH, [$this, 'onDispatch'], 100);
+    }
+    
+    public function onDispatch(MvcEvent $e)
+    {
+        // Get the view from the event class
+        $view = $e->getViewModel();
+        
+        // Add a variable to the view
+        $view->setVariable('categories', 'LIST_OF_CATEGORIES');
+        
+>>>>>>> origin/testing
     }
     
    public function onDispatch(MvcEvent $e)
