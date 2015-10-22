@@ -40,6 +40,40 @@ return array(
                     ),
                 ),
             ),
+            'customer-add' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/customer/account/add',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Customer\Controller',
+                        'controller'    => 'Account',
+                        'action'        => 'add',
+                    ),
+                ),
+            ),
+			'customer-edit' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/customer/account/edit',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Customer\Controller',
+                        'controller'    => 'Account',
+                        'action'        => 'edit',
+                    ),
+                ),
+            ),
+			'customer-list' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/customer/account/list',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Customer\Controller',
+                        'controller'    => 'Account',
+                        'action'        => 'list',
+                    ),
+                ),
+            ),
+
         ),
     ),
     'service_manager' => array(
@@ -75,4 +109,23 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
+    'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Customer',
+                'route' => 'customer',
+                'pages' => array(
+                    array(
+                        'label' => 'Add',
+                        'route' => 'customer-add',
+                    ),
+                    array(
+                        'label' => 'List Customers',
+                        'route' => 'customer-list',
+                    ),
+                ),
+            ),
+        ),
+    ),
+
 );

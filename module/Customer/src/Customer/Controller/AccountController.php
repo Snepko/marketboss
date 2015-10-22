@@ -70,14 +70,29 @@ class AccountController extends AbstractActionController
         $db = $this->getServiceLocator()->get('db');
         $sql = "
             SELECT *
-            FROM testing
+            FROM customers
         ";
          
         $result = $db->query($sql, array());
-        print_r($result);
-        return $result;
+        
+        $view = new ViewModel();
+        $view->setVariable('customers', $result);
+        return $view;
     }
-
+    
+    public function listAction()
+    {
+        $db = $this->getServiceLocator()->get('db');
+        $sql = "
+            SELECT *
+            FROM customers
+        ";
+         
+        $result = $db->query($sql, array());
+        $view = new ViewModel();
+        $view->setVariable('customers', $result);
+        return $view;
+    }
 
 }
 

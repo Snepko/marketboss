@@ -11,6 +11,8 @@ return array(
         'Debug',
         'User',
         'Customer',
+        'Lead',
+        'LeadStream',
     ),
     'module_listener_options' => array(
         'module_paths' => array(

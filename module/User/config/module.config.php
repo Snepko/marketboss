@@ -40,6 +40,53 @@ return array(
                     ),
                 ),
             ),
+            'user-add' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/user/account/add',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'User\Controller',
+                        'controller'    => 'Account',
+                        'action'        => 'add',
+                    ),
+                ),
+             ),
+             
+             'user-view' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/user/account/view',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'User\Controller',
+                        'controller'    => 'Account',
+                        'action'        => 'view',
+                    ),
+                ),
+             ),
+             
+             'user-list' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/user/account/list',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'User\Controller',
+                        'controller'    => 'Account',
+                        'action'        => 'list',
+                    ),
+                ),
+             ),
+			 'user-home' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/user/account/home',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'User\Controller',
+                        'controller'    => 'Account',
+                        'action'        => 'home',
+                    ),
+                ),
+             ),
+
         ),
     ),
     'service_manager' => array(
@@ -70,5 +117,28 @@ return array(
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
+    ),
+    
+    'navigation' => array(
+    	'default' => array(
+    		array(
+    			'label' => 'User',
+    			'route' => 'user',
+    			'pages' => array(
+    				array(
+    					'label' => 'User Home',
+    					'route' => 'user-home',
+    				),
+    				array(
+    					'label' => 'Add',
+    					'route' => 'user-add',
+    				),
+    				array(
+    					'label' => 'List Users',
+    					'route' => 'user-list',
+    				),
+    			),
+    		),
+       	),
     ),
 );

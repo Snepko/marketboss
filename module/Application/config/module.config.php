@@ -110,49 +110,9 @@ return array(
             array(
                 'label' => 'Home',
                 'route' => 'home',
+
             ),
-            array(
-                'label' => 'User',
-                'route' => 'user',
-                'pages' => array(
-                    array(
-                        'label' => 'Add',
-                        'route' => 'user',
-                        'action' => 'add',
-                    ),
-                    array(
-                        'label' => 'Edit',
-                        'route' => 'user',
-                        'action' => 'edit',
-                    ),
-                    array(
-                        'label' => 'Delete',
-                        'route' => 'user',
-                        'action' => 'delete',
-                    ),
-                ),
-            ),
-            array(
-                'label' => 'Customer',
-                'route' => 'customer',
-                'pages' => array(
-                    array(
-                        'label' => 'Add',
-                        'route' => 'customer',
-                        'action' => 'add',
-                    ),
-                    array(
-                        'label' => 'Edit',
-                        'route' => 'customer',
-                        'action' => 'edit',
-                    ),
-                    array(
-                        'label' => 'Delete',
-                        'route' => 'customer',
-                        'action' => 'delete',
-                    ),
-                ),
-            ),
+            
         ),
     ),
 );

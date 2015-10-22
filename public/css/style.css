@@ -4,9 +4,14 @@ body {
 }
 
 .zf-green {
-    color: #68b604;
+   /* color: #68b604; */
+   color: #155D8D;
 }
 
+.marketboss{
+	color: #155D8D;
+}
+/*
 .btn-success {
   background-color: #57a900;
   background-image: -moz-linear-gradient(top, #70d900, #57a900);
@@ -29,9 +34,10 @@ body {
 .btn-success:active, .btn-success.active {
   background-color: #57a900;
 }
+*/
 
 div.container a.brand {
-    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
+    background: url("../img/marketboss-logo.png") no-repeat scroll 0 10px transparent;
     margin-left: 0;
     padding: 8px 20px 12px 40px;
 }

@@ -17,6 +17,7 @@ class AccountController extends AbstractActionController
 
     public function addAction()
     {
+    	$viewModel = new ViewModel();
         $form = new UserForm();
         if($this->getRequest()->isPost())
         {
@@ -30,16 +31,18 @@ class AccountController extends AbstractActionController
                 // @todo: save the data of the new user
                 $model = new UserModel();
                 $id = $model->insert($form->getData());
-                echo "Form is submitted!";
-            }else{
+                $viewModel->setVariable('message', "<p class='alert alert-success'>Form is submitted!</p>");
                 
-                echo "<p>Form not valid!</p>";
+            }else{
+            	$viewModel->setVariable('message', "<p class='alert alert-error'>Form not valid!</p>");
             }
         }
         
+        $viewModel->setVariable('form1', $form);
         //pass the data to the view for visualization
-        return array('form1' => $form);
-    }
+        return $viewModel;
+        
+     }
 
     /**
      * This is used to register new accounts
@@ -50,21 +53,50 @@ class AccountController extends AbstractActionController
     }
 
     public function viewAction()
-    {
-        
+    {	
         return new ViewModel();
     }
 
     public function editAction()
     {
-        return new ViewModel();
+         return new ViewModel();
     }
 
     public function deleteAction()
     {
+    	$id = $this->getRequest()->getQuery()->get('id');
+    	if($id) {
+	    	$userModel = new UserModel();
+	    	$userModel->delete(array('id'=>$id));
+    	}
+    	
+    	$this->flashMessenger()->addMessage('<span class="alert alert-success">The user has been deleted!</span>');
+    	$this->redirect()->toRoute('user-list');
+    	
         return new ViewModel();
     }
 
+	public function listAction()
+	{
+		$db = $this->getServiceLocator()->get('db');
+        $sql = "
+            SELECT *
+            FROM users
+        ";
+         
+        $users = $db->query($sql, array());
+        $view = new ViewModel();
+        
+        $view->setVariable('users', $users);
+       // $view->setVariable('flashMessages', $this->flashMessenger()->getMessages());
+        //print_r($result);
+        return $view;
+	}
+	
+	public function homeAction()
+	{
+		return new ViewModel();
+	}
 
 }
 

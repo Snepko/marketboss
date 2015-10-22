@@ -10,6 +10,8 @@ return array(
         'Application',
         'Debug',
         'User',
+        'Customer',
+        'Lead',
     ),
     'module_listener_options' => array(
         'module_paths' => array(
