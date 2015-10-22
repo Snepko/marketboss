@@ -1,0 +1,58 @@
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pull-right">
+	<div class="dashboard-stat blue">
+	    <div class="visual">
+	            <i class="fa fa-comments"></i>
+	        </div>
+	        <div class="details">
+	            <div class="number">
+	                <span data-counter="counterup" data-value="1349">0</span>
+	            </div>
+
+	        <div class="desc"> Total Users </div>
+	    </div>
+	    <a class="more" href="javascript:;"> View more
+	        <i class="m-icon-swapright m-icon-white"></i>
+	    </a>
+	</div>
+</div>
+
+<h3 class='page-title'>Users <br /><small>List of users</small></h3>	
+
+
+<?php 
+if(!empty($flashMessages)){
+	foreach($flashMessages as $message){
+		echo "<p>{$message}</p>";
+	}
+}?>
+
+<table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+<?php 
+foreach($users as $user):?>
+        <tr>
+          <td><?=$user->name; ?></td>
+          <td><?=$user->email;?></td>
+	         <td>
+	         	<a href="/user/account/list?id=<?=$user->id?>">
+	          		<span class="glyphicon glyphicon-cog"></span>
+	         	</a>
+	          	<a href="/user/account/delete?id=<?=$user->id?>">
+				  	<span class="glyphicon glyphicon-remove"></span>
+				</a>
+			</td>
+        </tr>
+<?php endforeach; ?>      
+
+	</tbody>
+</table>
+
+</div>
