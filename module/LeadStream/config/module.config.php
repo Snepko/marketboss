@@ -6,13 +6,13 @@ return array(
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
-            'user' => array(
+            'lead-stream' => array(
                 'type'    => 'Literal',
                 'options' => array(
-                    'route'    => '/user',
+                    'route'    => '/lead-stream',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'User\Controller',
-                        'controller'    => 'Account',
+                        '__NAMESPACE__' => 'LeadStream\Controller',
+                        'controller'    => 'Index',
                         'action'        => 'index',
                     ),
                 ),
@@ -32,8 +32,33 @@ return array(
                     ),
                 ),
             ),
+            
+			'lead-stream-add' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/LeadStream/Index/add',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'LeadStream\Controller',
+                        'controller'    => 'Index',
+                        'action'        => 'add',
+                    ),
+                ),
+             ),
+			
+			'lead-stream-list' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/lead',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'LeadStream\Controller',
+                        'controller'    => 'Index',
+                        'action'        => 'list',
+                    ),
+                ),
+			),
         ),
     ),
+    
     'service_manager' => array(
         'invokables'    =>  array(
            'LeadStream' => 'LeadStream\Service\LeadStream'
@@ -42,6 +67,7 @@ return array(
             
         ),
     ),
+    
     'translator' => array(
         'locale' => 'en_US',
         'translation_file_patterns' => array(
@@ -52,12 +78,13 @@ return array(
             ),
         ),
     ),
+    
     'controllers' => array(
         'invokables' => array(
-            'User\Controller\Account' => 'User\Controller\AccountController',
-            'User\Controller\Index' => 'User\Controller\IndexController'
+            'LeadStream\Controller\Index' => 'LeadStream\Controller\IndexController',
         ),
     ),
+    
     'view_manager' => array(
         'template_path_stack' => array(
             __DIR__ . '/../view',
@@ -67,20 +94,20 @@ return array(
     'navigation' => array(
     	'default' => array(
     		array(
-    			'label' => 'User',
-    			'route' => 'user',
+    			'label' => 'Lead Stream',
+    			'route' => 'lead-stream',
     			'pages' => array(
     				array(
-    					'label' => 'User Home',
-    					'route' => 'user-home',
+    					'label' => 'Lead Stream',
+    					'route' => 'lead-stream',
     				),
     				array(
-    					'label' => 'Add',
-    					'route' => 'user-add',
+    					'label' => 'Add Lead',
+    					'route' => 'lead-stream-add',
     				),
     				array(
-    					'label' => 'List Users',
-    					'route' => 'user-list',
+    					'label' => 'List Leads',
+    					'route' => 'lead-stream-list',
     				),
     			),
     		),

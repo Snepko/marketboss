@@ -1,0 +1,65 @@
+
+--
+-- Database: `marketbo_boss`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lead_stream`
+--
+
+CREATE TABLE IF NOT EXISTS `lead_stream` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status` varchar(150) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `company` varchar(100) NOT NULL,
+  `fname` varchar(50) NOT NULL,
+  `mname` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `address2` varchar(100) NOT NULL,
+  `city` varchar(75) NOT NULL,
+  `province` varchar(4) NOT NULL,
+  `postal` varchar(25) NOT NULL,
+  `phone_day` varchar(20) NOT NULL,
+  `phone_day_ext` varchar(10) NOT NULL,
+  `phone_evening` varchar(20) NOT NULL,
+  `phone_cell` varchar(20) NOT NULL,
+  `phone_fax` varchar(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `website` varchar(255) NOT NULL,
+  `lead_status` varchar(150) NOT NULL,
+  `lead_source` varchar(100) NOT NULL,
+  `lead_quality` int(11) NOT NULL,
+  `notes` varchar(255) NOT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `archive` tinyint(1) NOT NULL,
+  `updated` int(11) NOT NULL,
+  `timestamp` int(11) NOT NULL DEFAULT '0',
+  `lng` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8814 ;
+
+--
+-- Dumping data for table `lead_stream`
+--
+
+INSERT INTO `lead_stream` (`id`, `status`, `type`, `company`, `fname`, `mname`, `lname`, `address`, `address2`, `city`, `province`, `postal`, `phone_day`, `phone_day_ext`, `phone_evening`, `phone_cell`, `phone_fax`, `email`, `website`, `lead_status`, `lead_source`, `lead_quality`, `notes`, `location`, `archive`, `updated`, `timestamp`, `lng`) VALUES
+(6931, 'New Lead', '', 'Test', 'Jason', '', 'Denkers', '', '', 'Inwood', 'ON', 'N0N 1K0', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'Testing ', '7257-7301 Aberfeldy Line, Inwood, ON N0N 1K0, Canada', 0, 0, 0, -81.9277),
+(6929, 'New Lead', '', 'Unknown', '', '', '', '', '', 'Howard', 'ON', 'CA', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'New home', '12381-12895 River Line, Thamesville, ON N0P 2K0, Canada', 0, 0, 0, -82.0023),
+(6930, 'New Lead', '', 'Unknown', '', '', '', '', '', 'Camden Township', 'ON', 'CA', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'Test', '151-175 Longwoods Road, Thamesville, ON N0P 2K0, Canada', 0, 0, 0, -81.991),
+(7201, 'New Lead', '', 'Unknown', '', '', '', '', '', 'Blue Mountains', 'ON', 'N0H 1J0', '', '', '', '', '', '', '', '', 'Hotspot', 3, '', '596001-596199 4 Line, Blue Mountains, ON N0H 1J0, Canada', 0, 0, 0, -80.3546),
+(7197, 'New Lead', '', 'Unknown', '', '', 'Osman', '', '', 'Windsor', 'ON', 'N9J 2V6', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'Roof on , come back early next week ', '8300-8650 Malden Road, Windsor, ON N9J 2V6, Canada', 0, 0, 0, -83.0607),
+(7192, 'New Lead', '', 'Unknown', '', '', '', '', '', '', 'ON', '', '', '', '', '', '', '', '', '', 'Hotspot', 3, '', '100 spy court, markham, ontario', 0, 0, 0, 0),
+(7193, 'New Lead', '', 'Unknown', '', '', '', '', '', 'Toronto', 'ON', 'M5H 2N1', '', '', '', '', '', '', '', '', 'Hotspot', 3, '', '100 spy court, markham, ontario\r\n', 0, 0, 0, -79.3832),
+(7194, 'New Lead', '', 'Unknown', '', '', '', '', '', '', 'ON', '', '', '', '', '', '', '', '', '', 'Hotspot', 3, '', '', 0, 0, 0, 0),
+(8588, 'New Lead', '', 'Unknown', '', '', '', '', '', 'Kingsville', 'ON', 'N9Y 3M6', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'Huge house just before the corner of union ave', '1603-1699 Seacliff Drive, Kingsville, ON N9Y 3M6, Canada', 0, 0, 0, -82.6684),
+(8589, 'New Lead', '', 'McFarlane builders', '', '', '', '', '', 'Kingsville', 'ON', 'N9Y 2E6', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'Huge house, honey electric on site. Truck 25', '1540-1568 Seacliff Drive, Kingsville, ON N9Y 2E6, Canada', 0, 0, 0, -82.6744),
+(8590, 'New Lead', '', 'Coulson design-build inc', '', '', '', '', '', 'Kingsville', 'ON', 'N9Y 4E7', '', '', '', '', '', '', '', '', 'Hotspot', 3, '519-818-6601cell', '600 cedar island rd, Kingsville, ON N9Y 4E7, Canada', 0, 0, 0, -82.7786),
+(8601, 'New Lead', '', 'Brouwer construction', 'Henry', '', 'Ricoup', '', '', '', 'ON', '', '', '', '', '', '', '', '', '', 'Hotspot', 3, '20 unit apartment building ', '', 0, 0, 0, 0),
+(8620, 'New Lead', '', 'Zullich homes', '?', '', '?', '', '', 'Greater Sudbury', 'ON', 'P3B 1T3', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'Framing going up, no roof\r\nCorner of Prescott st on shelboirne street', 'Prescott Street, Greater Sudbury, ON P3B 1T3, Canada', 0, 0, 0, -80.9186),
+(8616, 'New Lead', '', 'Unknown', '', '', '', '', '', 'Muirkirk', 'ON', '', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'Foundation done ', '19830-20868 Talbot Line, Muirkirk, ON N0L 1X0, Canada', 0, 0, 0, -81.6734),
+(8630, 'New Lead', '', '?', '', '', '', '', '', 'Greater Sudbury Division', 'ON', '', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'New garage going up. Framing almost done', '3813 Regional Road 15, Greater Sudbury, ON P0M 1L0, Canada', 0, 0, 0, -81.1112),
+(8631, 'New Lead', '', 'North range sod', '', '', '', '', '', 'Greater Sudbury Division', 'ON', '', '', '', '', '', '', '', '', '', 'Hotspot', 3, 'Foundation going in', 'Regional Road 15, Greater Sudbury, ON P0M 1L0, Canada', 0, 0, 0, -81.1158),
+(8812, 'New Lead', '', 'Arista', '', '', '', '', '', 'Markham', 'ON', 'L3R', '', '', '', '', '', '', '', '', 'Hotspot', 5, 'Big development with few builders', '47 Ritter Crescent, Markham, ON L3R, Canada', 0, 0, 0, -79.3184);
