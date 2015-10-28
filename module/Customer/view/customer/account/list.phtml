@@ -1,53 +1,59 @@
 
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	    <div class="dashboard-stat blue">
-	        <div class="visual">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pull-right">
+	<div class="dashboard-stat blue">
+	    <div class="visual">
 	            <i class="fa fa-comments"></i>
 	        </div>
 	        <div class="details">
 	            <div class="number">
-	                <span data-counter="counterup" data-value="1349">0</span>
+	                <span data-counter="counterup" data-value="<?=$num_customers;?>">0</span>
 	            </div>
-	            <div class="desc"> Customers </div>
-	        </div>
-	        <a class="more" href="javascript:;"> View more
-	            <i class="m-icon-swapright m-icon-white"></i>
-	        </a>
-	    </div>
-	</div>
 
+	        <div class="desc"> Total Customers </div>
+	    </div>
+	    <a class="more" href="javascript:;"> View more
+	        <i class="m-icon-swapright m-icon-white"></i>
+	    </a>
+	</div>
+</div>
+
+<h3 class='page-title'>Customers <br /><small>List of customers</small></h3>	
+
+
+<?php 
+if(!empty($flashMessages)){
+	foreach($flashMessages as $message){
+		echo "<p>{$message}</p>";
+	}
+}?>
 
 <table class="table table-hover">
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Company</th>
+          <th>Name</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
+      
+<?php 
+foreach($customers as $customer):?>
         <tr>
-          <th scope="row">1</th>
-          <td>Gene</td>
-          <td>Goodreau</td>
-          <td>gene@marketboss.ca</td>
+          <td><?=$customer->company_name; ?></td>
+          <td><?=$customer->fname . ' ' . $customer->lname;?></td>
+	         <td>
+	         	<a href="/user/account/list?id=<?=$customer->id?>">
+	          		<span class="glyphicon glyphicon-cog"></span>
+	         	</a>
+	          	<a href="/user/account/delete?id=<?=$customer->id?>">
+				  	<span class="glyphicon glyphicon-remove"></span>
+				</a>
+			</td>
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Trevor</td>
-          <td>Sean</td>
-          <td>trevor@marketboss.ca</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Clayton</td>
-          <td>Reid</td>
-          <td>clayton@marketboss.ca</td>
-        </tr>
-      </tbody>
+<?php endforeach; ?>      
+
+	</tbody>
 </table>
 
 </div>
-
-                  

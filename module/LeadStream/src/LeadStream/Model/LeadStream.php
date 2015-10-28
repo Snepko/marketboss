@@ -15,6 +15,15 @@ class LeadStream extends AbstractTableGateway {
         $this->initialize();
 	}
 	
+	public function testLeadStream()
+	{
+		return "Testing lead stream is working!";	
+	}
+	
+	public function getNumLeads()
+	{
+		return 27;
+	}
 	/**
 	 * Find all leads based on the main customer list filter
 	 * @return object array

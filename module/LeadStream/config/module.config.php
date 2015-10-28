@@ -61,7 +61,7 @@ return array(
     
     'service_manager' => array(
         'invokables'    =>  array(
-           'LeadStream' => 'LeadStream\Service\LeadStream'
+           'LeadStream' => 'LeadStream\Model\LeadStream'
         ),
         'factories' => array(
             

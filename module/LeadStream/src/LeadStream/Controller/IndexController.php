@@ -10,7 +10,14 @@ class IndexController extends AbstractActionController
 
     public function indexAction()
     {
-        return new ViewModel();
+    	
+    	$leadStream = $this->serviceLocator->get('LeadStream');
+    	$result = $leadStream->testLeadStream();
+    
+		$viewModel = new viewModel();
+		$viewModel->setVariable('lead_stream', $result);
+		
+        return $viewModel;
     }
 
     public function addAction()

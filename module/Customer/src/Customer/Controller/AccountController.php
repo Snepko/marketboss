@@ -5,6 +5,7 @@ namespace Customer\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Customer\Form\Customer as CustomerForm;
+use Customer\Model\Customer as CustomerModel;
 use Zend\EventManager\EventManager;
 
 class AccountController extends AbstractActionController
@@ -27,30 +28,49 @@ class AccountController extends AbstractActionController
             echo "Data is: ";
             print_r($data);
             echo "<p>This is a test.</p>";
-            $form->setData($data);
+            //$form->setData($data);
             
-            if($form->isValid())
+            /*
+if($form->isValid())
             {
                 // @todo:  save the data of the new customer
             }
+*/
         }
-        return array('form1'=> $form);
+        return array('form'=> $form);
     }
 
     public function addAction()
     {
-        $data = array(
-            'test1' => 'Testing number 1',
-            'test2' => 'Testing number 2',
-        );
+    	$form = new CustomerForm();
         
+        
+        if($this->getRequest()->isPost())
+        {
+            $data = array_merge_recursive(
+                $this->getRequest()->getPost()->toArray(),
+                $this->getRequest()->getFiles()->toArray()
+            );
+            
+            $form->setData($data);
+            if($form->isValid()){
+                // @todo: save the data of the new user
+                $model = new CustomerModel();
+                $id = $model->insert($form->getData());
+                
+                
+                $message = "<p class='alert alert-success'>Form is submitted!</p>";
+                
+            }else{
+            	$message = "<p class='alert alert-error'>Form not valid!</p>";
+            }
+        }
+
         $view = new ViewModel($data);
-        $view->setVariable('testview', 'This is the variable test');
-        $view->setVariables(array(
-           'car' => 'porsche',
-            'truck' => 'Avalance',
-        ));
-        //$view->setTemplate('customer-template');
+        $view->setVariable('message', $message);
+        
+        $view->setVariable('form', $form);
+                //$view->setTemplate('customer-template');
         
         return $view;
     }
@@ -82,15 +102,19 @@ class AccountController extends AbstractActionController
     
     public function listAction()
     {
-        $db = $this->getServiceLocator()->get('db');
-        $sql = "
-            SELECT *
-            FROM customers
-        ";
-         
-        $result = $db->query($sql, array());
+    
+    	$customer = $this->serviceLocator->get('CustomerModel');
+    	$customer->setServiceLocator($this->serviceLocator);
+    	
+    	$customers = $customer->fetchAll();
+                
+        $num_customers = count($customers); 
+        
         $view = new ViewModel();
-        $view->setVariable('customers', $result);
+        
+        $view->setVariable('customers', $customers);
+        $view->setVariable('num_customers', $num_customers);
+        
         return $view;
     }
 
