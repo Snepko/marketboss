@@ -27,7 +27,18 @@ class IndexController extends AbstractActionController
 
     public function listAction()
     {
-        return new ViewModel();
+        
+        $leadStream = $this->serviceLocator->get('LeadStream');
+        $leadStream->setServiceLocator($this->serviceLocator);
+        
+        $leads = $leadStream->fetchAll();
+        $num_leads = count($leads);
+        
+        $viewModel = new viewModel();
+        $viewModel->setVariable('leads', $leads);
+        $viewModel->setVariable('num_leads', $num_leads);
+        
+        return $viewModel;
     }
 
 

@@ -1,3 +1,103 @@
-Module: LeadStream
-Controller: Index
-Action: list
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pull-right">
+	<div class="dashboard-stat blue">
+	    <div class="visual">
+	            <i class="fa fa-comments"></i>
+	        </div>
+	        <div class="details">
+	            <div class="number">
+	                <span data-counter="counterup" data-value="<?=$num_leads;?>">0</span>
+	            </div>
+
+	        <div class="desc"> Total Leads </div>
+	    </div>
+	    <a class="more" href="javascript:;"> View more
+	        <i class="m-icon-swapright m-icon-white"></i>
+	    </a>
+	</div>
+</div>
+
+<h3 class='page-title'>Lead Stream <br /><small>List of leads</small></h3>	
+
+
+<?php 
+if(!empty($flashMessages)){
+	foreach($flashMessages as $message){
+		echo "<p>{$message}</p>";
+	}
+}?>
+
+<table class="table table-hover">
+      <thead>
+        <tr>
+        	<th>Status</th>
+        	<th>Type</th>
+          <th>Company</th>
+          <th>Notes</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+<?php 
+foreach($leads as $lead):?>
+        <tr>
+        	<td><?=$lead->status;?></td>
+        	<td><?=$lead->type;?></td>
+          <td>
+          	<?=$lead->company; ?><br />
+          	<?=$lead->fname . ' ' . $lead->lname;?><br />
+          	<?=$lead->address; !empty($lead->address2)?"<br />{$lead->address2}":null;?>
+          	<?=$lead->city . ", " .$lead->province . " " . $lead->postal_code;?>
+          </td>
+          <td><?=$lead->notes;?></td>
+          <td><?=$lead->location;?></td>
+	         <td>
+	         	<a href="/user/account/list?id=<?=$lead->id?>">
+	          		<span class="glyphicon glyphicon-cog"></span>
+	         	</a>
+	          	<a href="/user/account/delete?id=<?=$lead->id?>">
+				  	<span class="glyphicon glyphicon-remove"></span>
+				</a>
+			</td>
+        </tr>
+<?php endforeach; ?>      
+
+	</tbody>
+</table>
+
+</div>
+<?php /*
+	CREATE TABLE lead_stream (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  `status` varchar(150) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  company varchar(100) NOT NULL,
+  fname varchar(50) NOT NULL,
+  mname varchar(50) NOT NULL,
+  lname varchar(50) NOT NULL,
+  address varchar(255) NOT NULL,
+  address2 varchar(100) NOT NULL,
+  city varchar(75) NOT NULL,
+  province varchar(4) NOT NULL,
+  postal varchar(25) NOT NULL,
+  phone_day varchar(20) NOT NULL,
+  phone_day_ext varchar(10) NOT NULL,
+  phone_evening varchar(20) NOT NULL,
+  phone_cell varchar(20) NOT NULL,
+  phone_fax varchar(20) NOT NULL,
+  email varchar(100) NOT NULL,
+  website varchar(255) NOT NULL,
+  lead_status varchar(150) NOT NULL,
+  lead_source varchar(100) NOT NULL,
+  lead_quality int(11) NOT NULL,
+  notes varchar(255) NOT NULL,
+  location varchar(255) DEFAULT NULL,
+  archive tinyint(1) NOT NULL,
+  updated int(11) NOT NULL,
+  `timestamp` int(11) NOT NULL DEFAULT '0',
+  lng float NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+*/?>

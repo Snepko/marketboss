@@ -78,16 +78,16 @@ class AccountController extends AbstractActionController
 
 	public function listAction()
 	{
-		$db = $this->getServiceLocator()->get('db');
-        $sql = "
-            SELECT *
-            FROM users
-        ";
-         
-        $users = $db->query($sql, array());
+		$user = new UserModel;
+		$user->setServiceLocator($this->serviceLocator);
+		$users = $user->fetchAll();
+
+        $num_users = count($users);
+        
         $view = new ViewModel();
         
         $view->setVariable('users', $users);
+        $view->setVariable('num_users', $num_users);
        // $view->setVariable('flashMessages', $this->flashMessenger()->getMessages());
         //print_r($result);
         return $view;

@@ -7,6 +7,7 @@ use Zend\Db\TableGateway\Feature;
 
 class LeadStream extends AbstractTableGateway {
 	
+	public $serviceLocator; 
 	
 	public function __construct(){
 		$this->table = 'lead_stream';
@@ -24,12 +25,31 @@ class LeadStream extends AbstractTableGateway {
 	{
 		return 27;
 	}
+	
+	public function fetchAll()
+    {
+	    $db = $this->serviceLocator->get('db');
+	    
+	    $sql = "
+            SELECT *
+            FROM {$this->table}
+        ";
+         
+        $result = $db->query($sql, array());
+
+	    return $result;
+    }
+
+	public function setServiceLocator($serviceLocator)
+    {
+    	$this->serviceLocator = $serviceLocator;
+    }
 	/**
 	 * Find all leads based on the main customer list filter
 	 * @return object array
 	 */
 	/*
-public static function fetchAll(){
+	public static function fetchAll(){
 		global $pdo;
 		
 		$sql = "
