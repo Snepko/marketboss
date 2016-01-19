@@ -1,0 +1,451 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Service",
+				"ServiceLocatorInterface"
+			],
+			[
+				"Table",
+				"TableGateway"
+			],
+			[
+				"Hy",
+				"HydratingResultSet"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 367.0,
+		"selected_items":
+		[
+			[
+				"Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/library/EcoResource.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/resources/resources.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Application/view/layout/layout.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/CredentialsTable.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Model/Credentials.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Form/EmployeeAdd.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/EmployeeTable.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Model/EmployeeAdd.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Model/Employee.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/config/module.config.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Form/Vacation.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Form/Performance.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Controller/EmployeeController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/partials/module_tabs.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/employee/manage.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/employee/add.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Form/Employee.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/employee/wage.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/employee/attendance.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/employee/partials/employee_tabs.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/employee/vacations.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/VacationTable.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/off.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/TimeOffTableGatewayFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/TimeOffTableFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/TimeOffTable.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/approval.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Form/TimeOff.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Model/Vacation.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Model/TimeOff.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Controller/AccountController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/vacation.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Application/config/module.config.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/employee/credentials.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Model/Performance.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/PerformanceTable.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/employee/performance.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Form/Wage.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/PerformanceTableGatewayFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/PerformanceTableFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/CredentialsTableGatewayFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/CredentialsTableFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Form/Credentials.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/homepages/icons.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/homepages/toolbar.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/myeco/event.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/VacationTableFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/VacationTableGatewayFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/WageTableGatewayFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/SickDaysTable.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/SickDaysTableFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Model/SickDays.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/SickDaysTableGatewayFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/list.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Controller/Factory/EmployeeControllerFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/partials/employee_tabs.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Controller/Factory/AccountControllerFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/performance.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/inactive-list.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/attendance.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/index.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/leaves.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/manage.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/vacations.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/wage.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Model/Wage.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/lib/class.SickDay.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/employees/employee_attendance.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/WageTableFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/WageTable.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/index.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/wage.phtml.bak",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/employees/employee_wage_info.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/css/bootstrap-custom.css",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/wage.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/vacations.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/leaves.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/performance.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/view/employee/account/attendance.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/lib/class.TimeOff.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/Module.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/config/application.config.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/EmployeeTableGatewayFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Table/Factory/ResourceTableFactory.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Employee/src/Employee/Controller/IndexController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/src/Resource/Form/Resource.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/view/resource/account/manage.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/src/Resource/Model/Resource.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/config/module.config.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/src/Resource/Table/ResourceTable.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/src/Resource/Controller/AccountController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/User/view/user/account/add.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/view/resource/account/add.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/view/resource/account/edit.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/view/resource/account/disabled-list.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/view/resource/account/list.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/project/view_builder.inc",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/lib/constants.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/lib/config.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/src/Resource/Controller/IndexController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Resource/Module.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Auth/config/module.config.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/User/src/User/Controller/AccountController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/User/src/User/Model/User.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/User/src/User/Controller/IndexController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Application/src/Application/Controller/IndexController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/template/header.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/homepages/homepage.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/logout.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/library/Authenticate.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Auth/src/Auth/Controller/IndexController.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Auth/view/auth/index/login.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Application/view/layout/login.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Auth/view/auth/index/logout.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Auth/view/auth/index/index.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Auth/view/auth/index/blank.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Application/view/application/index/index.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Auth/src/Auth/Form/LoginForm.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Application/view/layout/blank.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/lib/initialize.php.bak",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/lib/initialize copy.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/reports/mark-reconciled.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/homepages/completeFollowup.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/customer/update-customer-status.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/completeFollowup.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/public/h/reports/index.php",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Application/view/layout/navigation.phtml",
+		"/Users/goodreau/Documents/Sites/ecofranchise/module/Auth/src/Auth/Form/LoginFormFilter.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/goodreau/Documents/Sites/ecofranchise",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"null",
+			"required",
+			"$employee",
+			"Vacation",
+			"?>",
+			"<?=",
+			"Wage",
+			"SickDays",
+			"reviewer_id",
+			"$employee",
+			"vacation",
+			"$employee",
+			"Performance",
+			"employee",
+			"WageTable",
+			"date_time_end",
+			"type",
+			"$resource",
+			"$sqlSelect",
+			"$this->$",
+			";;",
+			"EmployeeTable",
+			"Employee",
+			"$this-> ",
+			"public",
+			"resource",
+			"Resource",
+			"resource",
+			"Resource",
+			"1",
+			"legend",
+			"fieldset",
+			"=> ",
+			"Zend_Mail",
+			"qPf",
+			"qPfLyABE",
+			"job_image5636791b7b1b1.jpg",
+			"qPfLyABE",
+			"User",
+			"user",
+			"User",
+			"user",
+			"User",
+			"user",
+			"User",
+			"user",
+			"User",
+			"user",
+			"User",
+			"user",
+			"$user",
+			"User",
+			"$user",
+			"User",
+			"user",
+			"USER",
+			"User",
+			"$user",
+			"User",
+			"users",
+			"User",
+			"user",
+			"User",
+			"user",
+			"$resource",
+			"phone",
+			"= ",
+			"?:''",
+			")",
+			"if($this->",
+			";",
+			"$this->"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"''",
+			"$request",
+			"Credentials",
+			"",
+			"echo",
+			"Vacation",
+			"date_start",
+			"type",
+			"$vacation",
+			"vacation",
+			"SickDays",
+			"performance",
+			"PerformanceTable",
+			"issue_date",
+			"issue",
+			"$wage",
+			"$select",
+			"$this->",
+			";",
+			"TimeOffTable",
+			"TimeOff",
+			"$this->",
+			"employee",
+			"Employee",
+			"employee",
+			"Employee",
+			"qPfLy123",
+			"Auth",
+			"auth",
+			"Auth",
+			"auth",
+			"Auth",
+			"auth",
+			"Auth",
+			"auth",
+			"Auth",
+			"auth",
+			"Auth",
+			"Resource",
+			"resource",
+			"$resource",
+			"Resource",
+			"$resource",
+			"Resource",
+			"resource",
+			"RESOURCE",
+			"Resource",
+			"$resource",
+			"Resource",
+			"resources",
+			"Resource",
+			"resource",
+			"Resource",
+			"resource",
+			"$user",
+			"    = ",
+			"?$data['']",
+			"= isset($data[''])?",
+			"$this->",
+			"):'':null;",
+			"if($this->"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 230.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true
+}
