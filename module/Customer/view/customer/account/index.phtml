@@ -1,0 +1,12 @@
+<div class="m-heading-1 border-black m-bordered">
+    <h3>Add Customer</h3>
+    <p>Add customer interface. This is technically the index page and will be changed to the 'Add Customer' page.</p>
+</div><form>
+
+
+<?php 
+$this->form1->prepare();
+echo $this->form()->openTag($this->form1);
+echo $this->formCollection($this->form1);
+echo $this->form()->closeTag();
+?>

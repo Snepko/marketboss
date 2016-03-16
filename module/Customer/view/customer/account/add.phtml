@@ -1,0 +1,34 @@
+<?= $this->message; ?>
+
+<h1>Add Customer</h1>
+
+<?php 
+$this->form->setAttribute('class', 'form-horizontal');
+$this->form->prepare();
+
+echo $this->form()->openTag($this->form);?>
+
+<fieldset>
+
+<?php
+foreach($this->form as $element):
+	if(!($element instanceof Zend\Form\Form\Element\Sbumit)):?>
+	
+	<div class='control-group'>
+		<label class='control-label' for="<?= $element->getName();?>"><?= $element->getLabel(); ?></label>
+		
+		<div class='controls'>
+			<?= $this->formElement($element); ?>
+			<?= $this->formElementErrors($element); ?>
+		</div>
+	</div>
+
+<?php endif; endforeach; ?>
+
+<div class='form-actions'>
+
+</div>
+
+</fieldset>
+
+<?php echo $this->form()->closeTag();?>

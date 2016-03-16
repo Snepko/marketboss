@@ -1,0 +1,141 @@
+<?php
+echo $this->flashMessenger()->renderCurrent('error', array('alert', 'alert-danger'));
+echo $this->flashMessenger()->renderCurrent('success', array('alert', 'alert-success'));
+echo $this->flashMessenger()->renderCurrent('default', array('alert', 'alert-info'));
+?>
+<?php echo $this->escapeHtml($this->messages); ?>
+<?php 
+$form = $this->form;
+$form->setAttribute('action', $this->url('auth-login', 
+	array('controller' => 'index', 'action' => 'login')));
+$form->prepare();
+
+?>
+<style>
+ul
+{
+list-style-type: none;
+}
+
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 50px;
+    padding: 40px 0px 20px 0px;
+    background-color: white;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 200px;
+    height: 150px;
+    margin: 0 auto 10px;
+    display: block;
+    /*-moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;*/
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+.container{
+	background-color: #f7f7f7;
+}
+body{
+	background-color: #f7f7f7;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <!-- <h1 class="text-center login-title">Sign in to Eco Enterprise</h1> -->
+            <div class="account-wall">
+                <img class="profile-img" src="/images/login-logo.jpg"
+                    alt="">
+                <!-- <form class="form-signin"> -->
+               <?php echo $this->form()->openTag($form); ?>
+                	<?php
+                	echo $this->formRow($form->get('username'));
+					echo $this->formRow($form->get('password'));
+					
+					?>
+               <!--  <input type="text" class="form-control" placeholder="Email" required autofocus>
+                <input type="password" class="form-control" placeholder="Password" required> -->
+                
+                <?php echo $this->formRow($form->get('submit')); ?>
+               <!--  <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    Remember me
+                </label> -->
+                <?php echo $this->form()->closeTag();?>
+                <!-- <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span> -->
+                </form>
+
+                <!-- Begin DigiCert site seal HTML and JavaScript -->
+        <div id="DigiCertClickID_dwXJFCqU" data-language="en_US">
+            <a href="http://www.digicert.com/ssl-certificate.htm">SSL Certificate</a>
+        </div>
+        <script type="text/javascript">
+        var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_dwXJFCqU", "3", "m", "black", "dwXJFCqU"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+        </script>
+<!-- End DigiCert site seal HTML and JavaScript -->
+            </div>
+           <!--  <a href="#" class="text-center new-account">Create an account </a> -->
+        </div>
+    </div>
+</div>
+

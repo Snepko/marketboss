@@ -8,11 +8,11 @@
 return array(
     'modules' => array(
         'Application',
-        // 'Debug',
-        // 'User',
-        // 'Customer',
-        /* 'Lead', */
-        // 'LeadStream',
+        'Debug',
+        'User',
+        'Customer',
+        'Lead', 
+        'LeadStream',
     ),
     'module_listener_options' => array(
         'module_paths' => array(

@@ -1,0 +1,39 @@
+
+<h1>Customer List</h1>
+
+
+<?php 
+foreach($customers as $customer){
+	echo "<br />{$customer->company_name}";
+}?>
+<table class="table table-hover">
+	<caption>List of Users</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Gene</td>
+          <td>Goodreau</td>
+          <td>gene@marketboss.ca</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Trevor</td>
+          <td>Sean</td>
+          <td>trevor@marketboss.ca</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Clayton</td>
+          <td>Reid</td>
+          <td>clayton@marketboss.ca</td>
+        </tr>
+      </tbody>
+</table>
